@@ -11,5 +11,5 @@ Tools used in this project:
 - Kubernetes
 
 
-The wiki can be accessed via this link: [Wiki](https://github.com/mnhnielsen/DateCollectionMicroservice/wiki) 
+The wiki can be accessed via this link: [Wiki](https://github.com/mnhnielsen/DateCollectionMicroservice/wiki/1.-Introduction) 
 
