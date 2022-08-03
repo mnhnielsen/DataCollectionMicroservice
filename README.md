@@ -7,7 +7,7 @@ Tools used in this project:
 - Fluentd for gathering logs from the the different services running on the Kubernetes cluster
 - Kibana for visualizing business metrics about our users.
 - MongoDB for storing direct user information such as emails, names etc.
-- Docker for containerizing our application
+- Docker for containerizing our applications
 - Kubernetes
 
 
