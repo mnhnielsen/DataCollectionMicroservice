@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: t05-kibana
+  labels:
+    app: t05-kibana
+spec:
+  selector:
+    matchLabels:
+      app: t05-kibana
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: t05-kibana
+    spec:
+      containers:
+      - name: t05-kibana
+        image: kibana:7.14.2
+        ports:
+        - containerPort: 5601
+        env:
+        - name: ELASTICSEARCH_URL
+          value: "http://t05-elasticsearch:9200"
+        - name: ELASTICSEARCH_HOSTS
+          value: "http://t05-elasticsearch:9200"
+        - name: SERVER_BASEPATH
+          value: /service02/kibana
+        - name: SERVER_REWRITEBASEPATH
+          value: "false"
+        resources:
+          limits:
+              cpu: 300m
+              memory: 800Mi
+          requests:
+              cpu: 150m
+              memory: 300Mi  
+ 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: t05-kibana
+spec:
+  selector:
+    app: t05-kibana
+  ports:
+    - protocol: TCP
+      port: 5601
+      targetPort: 5601
+     
+
+
