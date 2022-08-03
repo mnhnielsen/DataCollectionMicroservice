@@ -11,5 +11,5 @@ Tools used in this project:
 - Kubernetes
 
 
-The wiki can be accessed via this link: [Wiki](https://gitlab.sdu.dk/semester-project-e2021/team-05/template/-/wikis/home) 
+The wiki can be accessed via this link: [Wiki](https://github.com/mnhnielsen/DateCollectionMicroservice/wiki) 
 
